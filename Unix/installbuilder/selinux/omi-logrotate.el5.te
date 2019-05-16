@@ -6,11 +6,10 @@ require {
         type init_t;
         type var_t;
         class file getattr;  
-        class dir write;  
+        class dir write;
         class file read;
-        class file open;
         class file unlink;
-        class file write;
+        class file write; 
 }  
 
 #============= logrotate_t ==============  
@@ -20,6 +19,5 @@ allow logrotate_t var_log_t:file getattr;
 
 #============= init_t ==============
 allow init_t var_t:file read;
-allow init_t var_t:file open;
 allow init_t var_t:file unlink;
 allow init_t var_t:file write;
